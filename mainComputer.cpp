@@ -9,6 +9,7 @@ int main()
 	// start up variables for the computer
 	CommandShell cmdShell;
 	Memory RAM;
+	bool test = true;
 
 	// user experience, make it fun
 	std::cout << "***Starting SkyNet Command Console 2020***";
@@ -24,10 +25,28 @@ int main()
 	{
 		// gather command from user
 		std::string userCmd;
-		std::cout << "\n\nPlease enter your command\n";
-		getline(std::cin, userCmd);
-		// pass command to command shell function
-		cmdShell.IntakeCommand(userCmd, RAM);
+
+		if (test)
+		{
+			std::cout << "\n>";
+			getline(std::cin, userCmd);
+			if (userCmd == "")
+			{
+				test = false;
+			}
+			else
+			{
+				// pass command to command shell function
+				cmdShell.IntakeCommand(userCmd, RAM);
+			}
+
+		}
+		else
+		{
+			//Do Nothing
+			test = true;
+		}
+		
 
 	} while (true); // the infinite loop should be OK since the Exit command will close the program
 	return 0;

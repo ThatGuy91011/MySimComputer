@@ -52,7 +52,7 @@ void CommandShell::DisplayHelp()
 	std::cout << "\nHelp - Displays this Help Menu";
 	std::cout << "\nLoad - Loads a program into memory";
 	std::cout << "\nRun - Runs the program in memory";
-	std::cout << "\nDisplayMem - Displays all memory locations and values";
+	std::cout << "\nDisplayMem/dm - Displays all memory locations and values";
 	std::cout << "\nExit - Exits this Shell";
 }
 
@@ -133,7 +133,7 @@ void CommandShell::ConfirmClose()
 {
 	std::string confirm;
 	// ask the user to make sure
-	std::cout << "\nAre you sure you want to shut down the computer? Y/N\n";
+	std::cout << "\n>Are you sure you want to shut down the computer? Y/N\n>";
 	// gather answer
 	std::cin >> confirm;
 
