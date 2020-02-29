@@ -138,12 +138,12 @@ void CommandShell::ConfirmClose()
 	std::cin >> confirm;
 
 	// is it yes or no?
-	if (confirm == "Y" || confirm == "y")
+	if (confirm == "Y" || confirm == "y"||confirm == "yes"||confirm == "YES"||confirm == "Yes")
 	{
 		// close the program
 		exit(0);
 	}
-	else if (confirm == "N" || confirm == "n")
+	else if (confirm == "N" || confirm == "n"||confirm == "No"||confirm == "NO"||confirm == "no")
 	{
 		// todo: this feels clunky, sharpen up somehow?
 	}
