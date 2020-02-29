@@ -2,6 +2,7 @@
 #include <string>
 #include "CommandShell.h"
 #include "Memory.h"
+#include "Processor.h"
 
 
 int main()
@@ -9,6 +10,7 @@ int main()
 	// start up variables for the computer
 	CommandShell cmdShell;
 	Memory RAM;
+	Processor processor(RAM);
 	bool test = true;
 
 	// user experience, make it fun
